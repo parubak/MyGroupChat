@@ -14,7 +14,10 @@
 .cxx
 local.properties
 /.idea/.gitignore
+/.idea/*
+
 
 # Project exclude paths
 /app/build/
 /app/build/intermediates/javac/debug/classes/
+/app/google-services.json

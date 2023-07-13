@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".UsersFragment"
+    android:background="@color/bg">
+
+
+   <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/profile_bg"
+        android:layout_margin="15dp"
+       android:paddingBottom="10dp">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/userImgContainer"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_margin="10dp"
+        android:elevation="10dp"
+        app:cardCornerRadius="50dp"
+        android:layout_centerHorizontal="true">
+        <ImageView
+            android:id="@+id/userImg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/person"
+            android:scaleType="centerCrop"/>
+    </androidx.cardview.widget.CardView>
+
+       <com.example.mychat.ToolDotProgress
+           android:id="@+id/dots_progress"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           app:color="@color/teal_200"
+           app:count="3"
+           app:timeout="300"
+           android:visibility="gone"
+           android:layout_centerHorizontal="true"
+           android:layout_above="@id/userName"
+           android:elevation="10dp"/>
+
+
+
+    <EditText
+        android:id="@+id/userName"
+        android:layout_below="@id/userImgContainer"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:textColor="@color/white"
+        android:hint="UserName"
+        android:textColorHint="#7F7193"
+        android:minWidth="200dp"
+        android:gravity="center"
+        android:background="@drawable/edit_text_bg"
+        android:layout_marginVertical="5dp"/>
+    <EditText
+        android:id="@+id/userAbout"
+        android:layout_below="@id/userName"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:textColor="@color/bg_white"
+        android:hint="About"
+        android:textColorHint="#7F7193"
+        android:minWidth="200dp"
+        android:gravity="center"
+        android:background="@drawable/edit_text_bg"
+        android:layout_marginVertical="5dp"/>
+       <Button
+           android:id="@+id/updateProf"
+           android:layout_below="@id/userAbout"
+           android:layout_centerHorizontal="true"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="Update"
+           android:textAllCaps="false"
+           android:background="@drawable/bg_green"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/setting_btm_bg"
+        android:gravity="center"
+        android:padding="20dp"
+        android:orientation="vertical"
+        android:layout_marginHorizontal="10dp">
+
+        <Button
+            android:id="@+id/logOut"
+            android:layout_below="@id/userAbout"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Exit"
+            android:textAllCaps="false"
+            android:background="@drawable/bg_recieve"/>
+
+
+
+        />
+
+    </LinearLayout>
+
+</RelativeLayout>
